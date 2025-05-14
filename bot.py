@@ -74,8 +74,8 @@ CHECK_ONCE = []
 
 ST1 = [ 
     [
-        InlineKeyboardButton(text="Updates Channel", url="https://t.me/jv"),
-        InlineKeyboardButton(text="Support Grp", url="https://t.me/jv")
+        InlineKeyboardButton(text="Updates Channel", url="https://t.me/Horn_Support"),
+        InlineKeyboardButton(text="Support Grp", url="https://t.me/Horn_support")
     ],
     [
         InlineKeyboardButton(f"About", callback_data="About"),
@@ -98,16 +98,16 @@ PLANS_TEXT = '''**Here You will find all of our Premium Plans:-**
     🟢 **Plan 2:-**
         **Plan Name:-** `Starter`
         **Price:- **
-              **USD:-** `9$`
-              **INR:-** `299₹`
+              **USD:-** `1$`
+              **INR:-** `70₹`
         **DRM Video Limit:-** `100 Videos`
         **validity:-** `30 days`
 
     🔵 **Plan 3:-**
         **Plan Name:-** `Standard`
         **Price:-** 
-              **USD:-** `13$`
-              **INR:-** `899₹`
+              **USD:-** `2$`
+              **INR:-** `149₹`
         **DRM Video Limit:-** `Unlimited Videos`
         **validity:-** `30 days`
 
@@ -120,7 +120,7 @@ PLANS_TEXT = '''**Here You will find all of our Premium Plans:-**
 Payment Method:- Binance
 For **INR:-** PhonePay, PayTm, UPI
 
-**Contact  @JV For Subscription**'''
+**Contact  @Horn_support For Subscription**'''
 
 HELP_TEXT = """Here You can find all available Commands:-
     /start :- To start The Bot
@@ -143,9 +143,9 @@ ABOUT_TEXT = """**🄳🅁🄼 🄳🄾🅆🄽🄻🄾🄳🄴 🄱🄾🅃
   ➺ My Name  : HS Download Bot
   ➺ Version      :  `v1.0.0`
   ➺ Language  : `English`
-  ➺ Owner        : `JV`
+  ➺ Owner        : `Horn`
   ➺ Release     : `India`
-  ➺ Developer  : @JV
+  ➺ Developer  : @Horn_support
 
 ╚════════✧❁✧════════➩"""
 
@@ -156,7 +156,7 @@ async def filter_subscription(_, __, m):
     if chkUser:
         return True
     await mydb.add_user(m.from_user.id)
-    await m.reply_text("❎ You do not have a subscription\n\n📞 Contact us to buy a subscription [Sadiya](https://t.me/JV)")
+    await m.reply_text("❎ You do not have a subscription\n\n📞 Contact us to buy a subscription [『 𝐇𝐨̺͆𝐫𝐧 』](https://t.me/Horn_Support)")
     return False
 
 static_auth_filter = filters.create(filter_subscription)
@@ -175,7 +175,7 @@ async def callback(_, cb: CallbackQuery):
     if cb.data == "plans":
        await cb.edit_message_text(text=PLANS_TEXT, reply_markup=InlineKeyboardMarkup(ST1), disable_web_page_preview=True)
     if cb.data == "ContactUs":
-       await cb.edit_message_text(text=f"**📞 Contact [Jv](https://t.me/jv)**", reply_markup=InlineKeyboardMarkup(ST1), disable_web_page_preview=True)
+       await cb.edit_message_text(text=f"**📞 Contact [『 𝐇𝐨̺͆𝐫𝐧 』](https://t.me/Horn_Support)**", reply_markup=InlineKeyboardMarkup(ST1), disable_web_page_preview=True)
         
 
 @TGBot.on_message(filters.command("sub") & filters.user(Config.OWNER_ID))
@@ -246,11 +246,11 @@ async def get_subscription(user_id):
 
 ⬆️ If you want to increase the subscription then see the plan now and contact us admin
 
-  **🥰 @JV Contact owner for updating subscription.**
+  **🥰 @Horn_support Contact owner for updating subscription.**
 
                **Have a Nice day 😊** """
     else:
-        msg = "**Subscription details:**\n\n    **🎊 Current Plan:** `No Plan`\n          **Plan Name -** `Free`\n          **Is Premium -** `No`\n          **Task Limit -** `No Have`\n     **👑 user:** `Free User`\n     **🎦 videos:** `0 Video`\n     **⏳ expires:** `0 Days`\n\n**🥰 @JV Contact owner for updating subscription.**\n\n               **Have a Nice day 😊**"
+        msg = "**Subscription details:**\n\n    **🎊 Current Plan:** `No Plan`\n          **Plan Name -** `Free`\n          **Is Premium -** `No`\n          **Task Limit -** `No Have`\n     **👑 user:** `Free User`\n     **🎦 videos:** `0 Video`\n     **⏳ expires:** `0 Days`\n\n**🥰 @Horn_support Contact owner for updating subscription.**\n\n               **Have a Nice day 😊**"
     return msg
 
 @TGBot.on_message(filters.command(["plans", "plan"]))
@@ -386,9 +386,9 @@ You can use me to Download DRM protected links to Telegram ⤵️
 
 Here I support Direct DRM links of Zee5, Hotstar etc..................
 
-I can also DRM protected links transloaded from @JV 
+I can also DRM protected links transloaded from @Horn_Support 
 
-If you found any issue please contact Support @JV**
+If you found any issue please contact Support @Horn_Support**
 
 
 **Bot Uptime:**  `{strftime("hours:%H minutes:%M and seconds:%S" , gmtime(time() - BOT_START_TIME))} ago`""", reply_markup=InlineKeyboardMarkup(ST1))
