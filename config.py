@@ -6,7 +6,7 @@ if os.path.exists("config.env"):
 
 class Config(object):
     ##API_KEY get it from dev, dont edit if added
-    API_KEY = os.environ.get("API_KEY", "No Need🤣🤣🤣🤣 Edited By Aryan Chaudhary ")
+    API_KEY = os.environ.get("API_KEY", "https://api.hotstar.com/h/v1/play?contentId=1260132573")
     #telegram user session str for 4gb limit
     SESSION_STRING = os.environ.get("SESSION_STRING", "BQGlVqIAaQCW7onbtdCbesyxExwOHWBZeA-bYLODgc95BpZSiHbwqGA0CC8_9EDtVxhSjDnAlLRGO3wM-oFp4CGEWCIn1Q996Xz4jCAlXPbc4eHRI06yRuuE3K_rd1uuBoL2IrdDaOA3447-dwVkdWRhH2yYrisu0NhFPEX4tXORVGhAw6NJSv5wjZ1-wzsRZZFHpTsCPSr8RybxCOWYiBZUpjNc1JPkNBPgr1KU4XOQbvjU")
     #tg bot token
